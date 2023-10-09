@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Housing Prices</title>
+</head>
+<body>
+    <form action="/get_prices" method="post">
+        <label for="suburb">Select Suburb:</label>
+        <select name="suburb" id="suburb">
+            {% for suburb in suburbs %}
+                <option value="{{ suburb }}">{{ suburb }}</option>
+            {% endfor %}
+        </select>
+        <br>
+        <label for="housing_type">Select Housing Type:</label>
+        <select name="housing_type" id="housing_type">
+            {% for housing_type in housing_types %}
+                <option value="{{ housing_type }}">{{ housing_type }}</option>
+            {% endfor %}
+        </select>
+        <br>
+        <input type="submit" value="Get Prices">
+    </form>
+</body>
+</html>
